@@ -2,25 +2,25 @@ var express = require('express');
 var bodyParser = require('body-parser');
 
 var  {mongoose} = require('./db/mongoose');
-//var  {Todo} = require('./models/todo');
+var  {Todo} = require('./models/todo');
 var  {User} = require('./models/user');
 
-var Todo = mongoose.model('Todo', {
-  text: {
-    type: String,
-    required: true,
-    minlength: 1,
-    trim: true
-  },
-  completed: {
-    type: Boolean,
-    default: false
-  },
-  completedAt:{
-    type: Number,
-    default: null
-  }
-});
+// var Todo = mongoose.model('Todo', {
+//   text: {
+//     type: String,
+//     required: true,
+//     minlength: 1,
+//     trim: true
+//   },
+//   completed: {
+//     type: Boolean,
+//     default: false
+//   },
+//   completedAt:{
+//     type: Number,
+//     default: null
+//   }
+// });
 
 var app = express();
 
